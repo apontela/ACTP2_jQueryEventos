@@ -18,6 +18,16 @@ $(function () {
     });
     $("#author").on("change", function () {
         $(".create__profile img").attr("src", "assets/images/profiles/" + $(this).val());
+    });
+    $(".create__form").submit(function(e) {
+        let name = $("#name").val();
+        let followers = $("#followers").val();
+        let likes = $("#likes").val();
+        let following = $("#following").val();
+        let image = $(".create__image img").attr("src");
+        let author_name = $('#author').children(':selected').text();
+        let author_image = $(".create__profile img").attr("src");
+        console.log(author_name, author_image);
+        e.preventDefault();
     })
-
 })
