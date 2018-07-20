@@ -13,5 +13,8 @@ $(function () {
         $(this).toggleClass("card__follow-btn--following");
         e.stopPropagation();
     });
+    $(".create__select").on("change", function () {
+        $(".create__image img").attr("src", "assets/images/squared/" + $(this).val());
+    })
 
 })
