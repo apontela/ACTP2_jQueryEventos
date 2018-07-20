@@ -6,5 +6,12 @@ $(function () {
         $(this).toggleClass("card__like--red");
         e.stopPropagation();
     });
+    $("a[href='#']").click(function (e) {
+        e.preventDefault();
+    });
+    $(".card__follow-btn").on("click", function (e) {
+        $(this).toggleClass("card__follow-btn--following");
+        e.stopPropagation();
+    });
 
 })
