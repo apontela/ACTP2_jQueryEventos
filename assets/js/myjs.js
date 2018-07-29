@@ -27,7 +27,10 @@ $(function () {
         let image = $(".create__image img").attr("src");
         let author_name = $('#author').children(':selected').text();
         let author_image = $(".create__profile img").attr("src");
-        console.log(author_name, author_image);
+        console.log(image)
         e.preventDefault();
+        let new_card = $("#invisible-card").clone().css("display", "list-item");
+        new_card.find("card__title h2").html(name);
+        $("ul").append(new_card);
     })
 })
